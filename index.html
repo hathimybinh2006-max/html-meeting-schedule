@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8fafc;
+        }
+        h1 {
+            color: #1e293b;
+        }
+        table {
+            border-collapse: collapse;
+            width: 75%;
+            min-width: 600px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 14px 18px;
+            text-align: left;
+        }
+        th {
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 15px;
+        }
+        tr:hover {
+            background-color: #f0f9ff;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0369a1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lịch họp công ty</h1>
+
+    <table border="1">
+        <tr>
+            <th>Ngày</th>
+            <th>Giờ</th>
+            <th>Nội dung cuộc họp</th>
+        </tr>
+        <tr>
+            <!-- Thứ Hai có 2 cuộc họp: sử dụng rowspan="2" cho cột Ngày -->
+            <td rowspan="2" class="highlight">Thứ Hai (14/10)</td>
+            <td>08:30 - 09:30</td>
+            <td>Họp giao ban đầu tuần toàn công ty</td>
+        </tr>
+        <tr>
+            <td>14:00 - 15:30</td>
+            <td>Họp rà soát tiến độ dự án phần mềm với khách hàng</td>
+        </tr>
+        <tr>
+            <!-- Thứ Ba có cuộc họp chiến lược kéo dài cả ngày: sử dụng colspan="2" gộp Giờ và Nội dung -->
+            <td class="highlight">Thứ Ba (15/10)</td>
+            <td colspan="2">08:00 - 17:00: Hội thảo chiến lược kinh doanh quý 4 (Kéo dài cả ngày)</td>
+        </tr>
+        <tr>
+            <!-- Thứ Tư có 2 cuộc họp: sử dụng rowspan="2" cho cột Ngày -->
+            <td rowspan="2" class="highlight">Thứ Tư (16/10)</td>
+            <td>09:00 - 10:30</td>
+            <td>Phỏng vấn ứng viên lập trình viên Frontend</td>
+        </tr>
+        <tr>
+            <td>15:00 - 16:30</td>
+            <td>Đào tạo nội bộ: Kỹ năng làm việc nhóm và Git nâng cao</td>
+        </tr>
+        <tr>
+            <!-- Thứ Sáu có tổng kết: sử dụng colspan="2" -->
+            <td class="highlight">Thứ Sáu (18/10)</td>
+            <td colspan="2">16:00 - 18:00: Họp tổng kết tuần và liên hoan cuối tuần</td>
+        </tr>
+    </table>
+</body>
+</html>
